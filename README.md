@@ -131,11 +131,15 @@ We are using VM1 to test its reachability to VM2 by using ICMP (Internet Control
 
 - Use the command "ssh labuser1@10.0.0.5" to access the Linux command line remotely by using the credentials to log in.
 
-- Type commands (username, pwd, etc) into the linux SSH connection and observe SSH traffic spam in WireShark
+- Type commands (touch and ls -la) into the linux SSH connection and observe SSH traffic spam in WireShark
   
 - Exit the SSH connection by typing ‘exit’ and pressing
 
   <img src="https://i.imgur.com/CIrC4Zr.png">
+
+  <img src="https://i.imgur.com/H1lYoy6.png">
+
+  <img src="https://i.imgur.com/ZdTTlXR.png">
 
 With the SSH protocol, we can securely access and managing another device from the device you're currently using. In this case VM1 is accessing VM2 and we can observe all this activity in Wireshark which will display our network traffic.
 
@@ -154,14 +158,23 @@ In WireShark we are simply seeing whether the process of this protocol taking pl
 
 - Filter for DNS in Wireshark.
 
-- Use "nslookup" to view DNS traffic in WireShark
+- Use "nslookup" to obtain your IP address and view DNS traffic in WireShark
 
 - Additionally, use "nslookup www.google.com" to view the websites public IP address and observe WireShark
 
 <img src="https://i.imgur.com/Kxafhga.png">
 
-<h3>UDP and TCP</h3>
+<h3>RDP Traffic</h3>
 
+- In WireShark filter for RDP by using ""tcp.port == 3389"" in our filter search bar.
+  
+- Observe all the active traffic taking place
+
+<img src="https://i.imgur.com/zsdLNMm.png">
+
+<img src="https://i.imgur.com/rfB8QNx.png">
+
+The RDP protocol allows us to watch all live traffic between both of our virtual machines. RDP relies on TCP port 3389 for communication which is why we specifically used "tcp.port == 3389" to filter for RDP traffic.
 
 
 
