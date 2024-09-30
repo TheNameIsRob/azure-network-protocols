@@ -102,7 +102,7 @@ Step 3: Log into the Windows 10 virtual machine using Remote Desktop Connection 
 
 Step 3: Start observing different kinds of network traffic.
 
-<h3>ICMP traffic </h3>
+<h3>ICMP Traffic </h3>
 
    - Filter for ICMP in WireShark
      
@@ -130,7 +130,7 @@ We are using VM1 to test its reachability to VM2 by using ICMP (Internet Control
 
 - Filter for SSH in WireShark
 
-- Use the command "ssh labuser1@10.0.0.5" to access the Linux command line remotely by using the credentials to log in.
+- Use the command "ssh Labuser1@10.0.0.5" to access the Linux command line remotely by using the credentials to log in.
 
 - Type commands (touch and ls -la) into the linux SSH connection and observe SSH traffic spam in WireShark
   
@@ -145,6 +145,7 @@ We are using VM1 to test its reachability to VM2 by using ICMP (Internet Control
 With the SSH protocol, we can securely access and managing another device from the device you're currently using. In this case VM1 is accessing VM2 and we can observe all this activity in Wireshark which will display our network traffic.
 
   <h3>DHCP</h3>
+  
   - Filter for DHCP in WireShark
   
   - Type in ipconfig /renew  
@@ -164,6 +165,8 @@ In WireShark we are simply seeing whether the process of this protocol taking pl
 - Additionally, use "nslookup www.google.com" to view the websites public IP address and observe WireShark
 
 <img src="https://i.imgur.com/Kxafhga.png">
+
+<img src="https://i.imgur.com/AzHKNPf.png">
 
 <h3>RDP Traffic</h3>
 
